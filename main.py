@@ -64,6 +64,17 @@ def main_menu():
         mx, my = pygame.mouse.get_pos()
 
         for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN and button_rg.collidepoint((mx, my)):
+                if event.button == 1:
+                    game_scene(cf, nf, 'orange')
+            if event.type == pygame.MOUSEBUTTONDOWN and button_p1.collidepoint((mx, my)):
+                if event.button == 1:
+                    game_scene(cf1, nf, 'skyblue')
+            if event.type == pygame.MOUSEBUTTONDOWN and button_p2.collidepoint((mx, my)):
+                if event.button == 1:
+                    game_scene(cf2, nf, 'green')
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                running = False
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
