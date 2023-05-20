@@ -82,7 +82,7 @@ def main_menu():
 
         pygame.display.flip()
         clock.tick(FPS)
-        return type(cf)
+    return type(cf)
 
 if __name__ == '__main__':
     main_menu()
