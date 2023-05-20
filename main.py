@@ -31,13 +31,14 @@ def game_scene(cf, nf, color):
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 running = False
-                #main_menu()
+                main_menu()
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-
+    
         pygame.display.flip()
         clock.tick(FPS)
+    return running
 
 def main_menu():
     c1 = randint(30, 44)
@@ -81,6 +82,7 @@ def main_menu():
 
         pygame.display.flip()
         clock.tick(FPS)
+        return type(cf)
 
 if __name__ == '__main__':
     main_menu()
